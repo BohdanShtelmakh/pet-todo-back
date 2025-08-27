@@ -115,15 +115,4 @@ src/
 - [TypeORM Docs](https://typeorm.io/)
 - [Swagger/OpenAPI](https://swagger.io/)
 
----
-
-## License
-
-This project is [UNLICENSED](./LICENSE).
-
----
-
-## Author
-
-- [Your Name or Organization]
 
