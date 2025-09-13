@@ -1,118 +1,83 @@
 # Pet TODO Backend
 
-A simple, modern, and secure TODO API built with [NestJS](https://nestjs.com/), TypeScript, and PostgreSQL.
-
-<p align="center">
-  <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
-</p>
+A simple TODO API built with [NestJS](https://nestjs.com/), TypeScript, and PostgreSQL.
 
 ---
 
 ## Features
 
-- User registration and authentication (JWT)
-- CRUD operations for TODO items
-- TODO reordering and filtering (all, completed, active)
+- User registration & JWT authentication
+- CRUD for TODO items
+- TODO reordering & filtering
 - PostgreSQL with TypeORM
-- Validation and serialization
-- OpenAPI (Swagger) docs at `/docs`
-- E2E and unit tests
+- OpenAPI docs at `/docs`
+- E2E & unit tests
 
 ---
 
-## Getting Started
+## Quick Start
 
 ### Prerequisites
 
-- Node.js (v18+ recommended)
+- Node.js (v18+)
 - npm
-- Docker (for PostgreSQL, optional)
+- Docker (optional, for PostgreSQL)
 
 ### Setup
 
-1. **Clone the repository**
+1. **Clone & install**
 
    ```bash
    git clone <your-repo-url>
    cd pet-todo-back
-   ```
-
-2. **Install dependencies**
-
-   ```bash
    npm install
    ```
 
-3. **Configure environment variables**
+2. **Environment variables**
 
-   Copy `.env.example` to `.env` and fill in your database and JWT settings.
+   Copy `.env.example` to `.env` and edit as needed.
 
-4. **Start PostgreSQL with Docker (optional)**
+3. **Run with Docker**
+
+   You can set up everything (including PostgreSQL) using Docker Compose.  
+   Edit the `.env` file for your settings, then:
 
    ```bash
    docker-compose up -d
    ```
 
-5. **Run the app**
+   This will start the database and the app.
+
+4. **Run locally**
+
+   If you prefer, start PostgreSQL yourself and run:
 
    ```bash
-   # development
-   npm run start
-
-   # watch mode
    npm run start:dev
-
-   # production
-   npm run build
-   npm run start:prod
    ```
 
-6. **API Documentation**
+5. **API Docs**
 
-   Visit [http://localhost:3000/docs](http://localhost:3000/docs) for Swagger UI.
-
----
-
-## Testing
-
-```bash
-# unit tests
-npm run test
-
-# e2e tests
-npm run test:e2e
-
-# test coverage
-npm run test:cov
-```
+   Visit [http://localhost:3000/docs](http://localhost:3000/docs)
 
 ---
 
-## Project Structure
+## Structure
 
 ```
 src/
-  ├── auth/         # Authentication (JWT, register, login)
+  ├── auth/         # Auth logic
   ├── user/         # User module
-  ├── todo/         # Todo module (CRUD, reorder, filter)
-  ├── decorators/   # Custom decorators (e.g., @Auth, @Public)
-  ├── http-exception/ # Custom exception filter
-  └── main.ts       # App entrypoint
+  ├── todo/         # Todo module
+  ├── decorators/   # Custom decorators
+  ├── http-exception/ # Exception filter
+  └── main.ts       # Entrypoint
 ```
-
----
-
-## Deployment
-
-- See [NestJS deployment docs](https://docs.nestjs.com/deployment)
-- You can use Docker, cloud platforms, or [NestJS Mau](https://mau.nestjs.com) for easy deployment.
 
 ---
 
 ## Resources
 
-- [NestJS Documentation](https://docs.nestjs.com)
+- [NestJS Docs](https://docs.nestjs.com)
 - [TypeORM Docs](https://typeorm.io/)
-- [Swagger/OpenAPI](https://swagger.io/)
-
-
+- [Swagger](https://swagger.io/)
